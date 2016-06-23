@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43B97712-A9F9-4704-BA87-E415B334946D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NHUNG_THOM</RootNamespace>
+    <AssemblyName>NHUNG_THOM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\StudentInfo.cs" />
+    <Compile Include="Student_View\XemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_View\XemDiem.Designer.cs">
+      <DependentUpon>XemDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\ComboBoxItem.cs" />
+    <Compile Include="Teacher\Diem_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\Diem_Form.Designer.cs">
+      <DependentUpon>Diem_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\LOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\LOP.Designer.cs">
+      <DependentUpon>LOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\MonHoc_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\MonHoc_Form.Designer.cs">
+      <DependentUpon>MonHoc_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teacher\SinhVien_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\SinhVien_Form.Designer.cs">
+      <DependentUpon>SinhVien_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\SubjectAddToClass_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\SubjectAddToClass_Form.Designer.cs">
+      <DependentUpon>SubjectAddToClass_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\ViewPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\ViewPoint.Designer.cs">
+      <DependentUpon>ViewPoint.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Teacher\Diem_Form.resx">
+      <DependentUpon>Diem_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\LOP.resx">
+      <DependentUpon>LOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\MonHoc_Form.resx">
+      <DependentUpon>MonHoc_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Teacher\SinhVien_Form.resx">
+      <DependentUpon>SinhVien_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\SubjectAddToClass_Form.resx">
+      <DependentUpon>SubjectAddToClass_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\ViewPoint.resx">
+      <DependentUpon>ViewPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
