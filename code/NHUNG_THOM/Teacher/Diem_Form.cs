@@ -88,6 +88,10 @@ namespace NHUNG_THOM
                 ComboBoxItem item = new ComboBoxItem(row[1].ToString(), row[2].ToString());
                 combo_LOP.Items.Add(item);
             }
+            foreach (DataColumn column in dataTable.Columns)
+            {
+                int x = 0;
+            }
         }
         private void Diem_Form_Load(object sender, EventArgs e)
         {

@@ -84,7 +84,8 @@ namespace NHUNG_THOM
 
         private void btn_Restore_Click(object sender, EventArgs e)
         {
-
+            Form restore_form = new RestoreDB_Form();
+            restore_form.ShowDialog();
         }
 
     }

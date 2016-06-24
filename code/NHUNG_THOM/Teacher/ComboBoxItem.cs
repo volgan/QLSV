@@ -31,4 +31,18 @@ namespace NHUNG_THOM.Teacher
             this.exited = false;
         }
     }   
+
+    public class RestoreModel
+    {
+        public int index { get; set; }
+        public string FileName { get; set; }
+        public DateTime CreateDate { get; set; }
+
+        public RestoreModel(int index, string FileName, DateTime CreateDate)
+        {
+            this.index = index;
+            this.FileName = FileName;
+            this.CreateDate = CreateDate;
+        }
+    }
 }
